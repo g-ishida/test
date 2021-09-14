@@ -8,5 +8,7 @@
    btn.addEventListener('click', () => {
        i++;
        count.innerHTML = i + '回';
+
+       window.alert('うんこまん');
    });
 }

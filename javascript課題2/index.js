@@ -9,10 +9,10 @@
     button.addEventListener('click', () => {
         if (fizz.value === "" || buzz.value === "") { //空文字なら
             window.alert('空文字');
-        } else if (!Number.isInteger(fizz.value) || !Number.isInteger(buzz.value)) { //小数なら
-            window.alert('小数だよ');
-        } else if (typeof fizz.value === "string" || typeof buzz.value === "string") { //文字列なら
+        } else if (isNaN(fizz.value) === true || isNaN(buzz.value) === true) {
             window.alert('文字列だよ');
+        } else if (Math.ceil(fizz.value) - Math.floor(fizz.value) !== 0 || Math.ceil(buzz.value) - Math.floor(buzz.value) !== 0) { //小数なら
+            window.alert('小数だよ');
         } else {　//エラーがないなら、数字を表示させる
             for (let i = 1; i < 100; i++) {
                 let element = document.createElement('p');
@@ -29,12 +29,10 @@
                     continue;
                 }
             }
-        }
+        } 
 
     });
-    
-    
 
-    
+
 
 }

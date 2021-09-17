@@ -15,7 +15,7 @@
             window.alert('小数だよ');
         } else {　//エラーがないなら、数字を表示させる
             for (let i = 1; i < 100; i++) {
-                let element = document.createElement('p');
+                const element = document.createElement('p');
                 if (i % fizz.value === 0 && i % buzz.value === 0) {
                     element.textContent = 'FizzBuzz' + i;
                     number.appendChild(element);
